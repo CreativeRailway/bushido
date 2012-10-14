@@ -1,0 +1,14 @@
+#slides
+  .slides_container
+    %div
+      = image_tag "interface/slider/First.png"
+    %div
+      = image_tag "interface/slider/Second.png"
+    %div
+      = image_tag "interface/slider/Third.png"
+
+:javascript
+  $("#slides").slides({
+    paginationClass: 'slider_pagination',
+    play: 5000
+  });

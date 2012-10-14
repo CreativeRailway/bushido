@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title
+      Bushido
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  %body
+    .container
+      .row
+        .span12
+          = render partial: "shared/top_menu"
+      .row
+        .span12
+          = yield

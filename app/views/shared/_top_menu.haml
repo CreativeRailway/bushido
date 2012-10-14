@@ -1,0 +1,86 @@
+-#.top_menu
+-#  .btn-toolbar
+-#    .btn-group
+-#      %a.btn.btn.btn-large{href: "pages?name=main"}
+-#        Главная
+-#      %a.btn.btn.btn-large{href: "pages?name=main"}
+-#        Контакты
+-#      %a.btn.btn.btn-large{href: "pages?name=main"}
+-#        Портфолио
+-#    .btn-group
+-#      %a.btn.btn.dropdown-toggle.btn-large{"data-toggle" => "dropdown", href: "#"}
+-#        Блог
+-#        %span.caret
+-#      %ul.dropdown-menu
+-#        %li
+-#          %a{href: "/articles"}
+-#            Про все
+-#        %li
+-#          %a{href: "/articles"}
+-#            Про рельсы
+-#        %li
+-#          %a{href: "/articles"}
+-#            Про развлечения
+-#
+
+.top_menu
+  .navbar
+    .navbar-inner
+      .brand
+        %i.icon-reorder
+      %ul.nav.pull-left
+        %li.active
+          %a{href: "#"}
+            %i.icon-home
+            Главная
+        %li
+          %a{href: "#"}
+            %i.icon-envelope-alt
+            Контакты
+        %li
+          %a{href: "#"}
+            %i.icon-briefcase
+            Портфолио
+        %li.dropdown
+          %a.dropdown-toggle{href:"#", "data-toggle" => "dropdown"}
+            %i.icon-list-alt
+            Блог
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "/articles"}
+                %i.icon-edit
+                Про все
+            %li
+              %a{href: "/articles"}
+                %i.icon-road
+                Про рельсы
+            %li
+              %a{href: "/articles"}
+                %i.icon-film
+                Про развлечения
+
+      - if user_signed_in?
+        %ul.nav.pull-right
+          %li
+            = link_to "<i class='icon-signout'></i> Выход".html_safe, destroy_user_session_path, :method => :delete
+      - else
+        %ul.nav.pull-right
+          %li
+            %a{href: "#{new_user_registration_path}"}
+              %i.icon-signin
+              Регистрация
+          %li
+            = link_to "<i class='icon-key'></i> Вход".html_safe, new_user_session_path
+
+
+
+
+
+
+
+
+
+
+
+

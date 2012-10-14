@@ -1,0 +1,17 @@
+.thumbnail_box
+  .thumbnail
+    %h6
+      Вы вошли как:
+      = " " + current_user.username.html_safe
+    %legend
+    %p
+      .btn-group
+        = link_to "<i class='icon-user'></i> Профиль".html_safe, "#", class: "btn btn-danger btn-small"
+        = link_to "<i class='icon-wrench'></i> Админка".html_safe, admin_dashboard_path , :method => :delete, class: "btn btn-danger btn-small" if current_user.role == "admin"
+        = link_to "<i class='icon-signout'></i> Выход".html_safe, destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-small"
+    %p
+      Последний вход:
+      = link_to "#{current_user.last_sign_in_at}", "#"
+      %br
+      Сообщений отправлено:
+      = link_to "32", "#"

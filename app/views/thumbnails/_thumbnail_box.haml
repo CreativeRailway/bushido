@@ -1,0 +1,11 @@
+.thumbnail_box
+  .thumbnail
+    = image_tag thumb.image.url(:mojet), style: "border: 2px solid gray" if thumb.image.file?
+    %h3
+      = thumb.title.html_safe
+    %legend
+    %p
+      = thumb.content.html_safe
+      .link-field
+        %a.btn.btn-danger.btn-small{href: "#{thumb.link_url if thumb.link_url}"}
+          = thumb.link_text

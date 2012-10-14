@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title
+      Bushido
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  %body
+    .container
+      .row
+        .span12
+          = render partial: "shared/top_menu"
+      .row
+        .span8
+          = render partial: "shared/carousel"
+          %br
+          = render partial: "shared/content", locals: {text: yield}
+        .span4
+          = render partial: "thumbnails/user_thumbnail_box" if current_user.present?
+          = yield :right_bar
+      .row
+        .span12
+          = render partial: "shared/footer"
