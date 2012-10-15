@@ -16,6 +16,8 @@ gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'less'
 
+gem "ckeditor", "3.7.1"
+
 gem 'devise'
 
 gem 'activeadmin'

@@ -1,4 +1,12 @@
 Bushido::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
+  resources :tags
+
+  resources :article_categories
+
+  resources :tag_linkers
+
   resources :articles
 
   ActiveAdmin.routes(self)

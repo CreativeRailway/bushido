@@ -1,28 +1,3 @@
--#.top_menu
--#  .btn-toolbar
--#    .btn-group
--#      %a.btn.btn.btn-large{href: "pages?name=main"}
--#        Главная
--#      %a.btn.btn.btn-large{href: "pages?name=main"}
--#        Контакты
--#      %a.btn.btn.btn-large{href: "pages?name=main"}
--#        Портфолио
--#    .btn-group
--#      %a.btn.btn.dropdown-toggle.btn-large{"data-toggle" => "dropdown", href: "#"}
--#        Блог
--#        %span.caret
--#      %ul.dropdown-menu
--#        %li
--#          %a{href: "/articles"}
--#            Про все
--#        %li
--#          %a{href: "/articles"}
--#            Про рельсы
--#        %li
--#          %a{href: "/articles"}
--#            Про развлечения
--#
-
 .top_menu
   .navbar
     .navbar-inner
@@ -47,18 +22,9 @@
             Блог
             %b.caret
           %ul.dropdown-menu
-            %li
-              %a{href: "/articles"}
-                %i.icon-edit
-                Про все
-            %li
-              %a{href: "/articles"}
-                %i.icon-road
-                Про рельсы
-            %li
-              %a{href: "/articles"}
-                %i.icon-film
-                Про развлечения
+            - ArticleCategory.all.each do |article|
+              %li
+                = link_to article.title, article_category_path(article)
 
       - if user_signed_in?
         %ul.nav.pull-right
