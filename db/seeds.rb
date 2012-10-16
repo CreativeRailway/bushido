@@ -1,3 +1,4 @@
+#encoding: utf-8
 ArticleCategory.all.destroy
 ArticleCategory.create(title: "Программирование")
 ArticleCategory.create(title: "Игры")
@@ -17,6 +18,7 @@ Thumbnails.create(title: "Коротко о нас ",
 if User.find_by_role("admin").nil?
   User.create(email: "creative.railway@gmail.com",
               password: "g[gujdyj",
-              username: "Creative Railway"
+              username: "Creative Railway",
+              role: "admin"
   )
 end
