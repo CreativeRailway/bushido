@@ -1,0 +1,11 @@
+= simple_form_for [:admin, resource] do |f|
+  - categories = ArticleCategory.collection_for_select
+  = f.input :title
+  = f.input :description, :input_html => {:class => "ckeditor"}
+  = f.input :content, :input_html => {:class => "ckeditor"}
+  = f.input :visible
+  = f.input :category_id, as: :select, collection: categories, selected: categories.first
+  = f.input :image, :as => :file, :hint => f.template.image_tag(f.object.head_image.url)
+  - if resource.head_image.file?
+    = f.input :_destroy, as: :boolean, label: "Destroy attach"
+  = f.submit
