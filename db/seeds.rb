@@ -4,13 +4,13 @@ ArticleCategory.create(title: "Программирование")
 ArticleCategory.create(title: "Игры")
 ArticleCategory.create(title: "Мысли")
 
-Thumnail.destroy_all
-Thumbnails.create(title: "Почему именно мы?",
+Thumbnail.destroy_all
+Thumbnail.create(title: "Почему именно мы?",
                   content: "Сейчас на рынке достаточно веб-разработчиков, предлагающих свои услуги. Наши главные преимущества - быстрота, качество и приемлимые цены (убедитесь в этом, заглянув в раздел 'Портфолио')",
                   link_text: "#",
                   link_url: "#")
 
-Thumbnails.create(title: "Коротко о нас ",
+Thumbnail.create(title: "Коротко о нас ",
                   content: "Мы - группа rails-разработчиков, которые предлагают свои услуги по разработке сайтов, интернет-магазинов и любых (даже самых больших) веб-приложений.",
                   link_text: "#",
                   link_url: "#")
