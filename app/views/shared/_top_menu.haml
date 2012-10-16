@@ -29,7 +29,7 @@
       - if user_signed_in?
         %ul.nav.pull-right
           %li
-            = link_to "<i class='icon-signout'></i> Выход".html_safe, destroy_user_session_path, :method => :delete
+            = link_to icon("signout", "Выход"), destroy_user_session_path, :method => :delete
       - else
         %ul.nav.pull-right
           %li
@@ -37,7 +37,7 @@
               %i.icon-signin
               Регистрация
           %li
-            = link_to "<i class='icon-key'></i> Вход".html_safe, new_user_session_path
+            = link_to icon("key", "Вход"), new_user_session_path
 
 
 
