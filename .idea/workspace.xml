@@ -40,7 +40,7 @@
       <file leaf-file-name="seeds.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="26" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.375">
+            <state line="2" column="43" selection-start="88" selection-end="88" vertical-scroll-proportion="0.035714287">
               <folding />
             </state>
           </provider>
@@ -766,7 +766,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="26" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.375">
+        <state line="2" column="43" selection-start="88" selection-end="88" vertical-scroll-proportion="0.035714287">
           <folding />
         </state>
       </provider>

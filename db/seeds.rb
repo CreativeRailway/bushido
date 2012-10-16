@@ -1,10 +1,10 @@
 #encoding: utf-8
-ArticleCategory.all.destroy
+ArticleCategory.destroy_all
 ArticleCategory.create(title: "Программирование")
 ArticleCategory.create(title: "Игры")
 ArticleCategory.create(title: "Мысли")
 
-Thumnail.all.destroy
+Thumnail.destroy_all
 Thumbnails.create(title: "Почему именно мы?",
                   content: "Сейчас на рынке достаточно веб-разработчиков, предлагающих свои услуги. Наши главные преимущества - быстрота, качество и приемлимые цены (убедитесь в этом, заглянув в раздел 'Портфолио')",
                   link_text: "#",
