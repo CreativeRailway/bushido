@@ -6,6 +6,11 @@
   = f.input :visible
   = f.input :category_id, as: :select, collection: categories, selected: categories.first
   = f.input :image, :as => :file, :hint => f.template.image_tag(f.object.head_image.url)
+  = f.fields_for :tags do |tag_form|
+    = tag_form.text_field :title
+    = tag_form.link_to_remove "Remove this task"
+  %p
+    = f.link_to_add "Add a task", :tags
   - if resource.head_image.file?
     = f.input :_destroy, as: :boolean, label: "Destroy attach"
   = f.submit

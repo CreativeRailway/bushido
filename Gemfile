@@ -20,6 +20,10 @@ gem "ckeditor", "3.7.1"
 
 gem 'devise'
 
+gem "nested_form"
+
+gem 'unicorn'
+
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 
