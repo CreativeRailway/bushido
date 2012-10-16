@@ -22,3 +22,8 @@ if User.find_by_role("admin").nil?
               role: "admin"
   )
 end
+
+Page.destroy_all
+Page.create(name: "main")
+Page.create(name: "contacts")
+Page.create(name: "portfolio")
