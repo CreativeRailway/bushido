@@ -1,4 +1,6 @@
 Bushido::Application.routes.draw do
+  root to: "pages#index", name: "main"
+
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :tags
@@ -19,6 +21,4 @@ Bushido::Application.routes.draw do
   resources :users
   resources :thumbnails
   resources :pages
-
-  root to: "pages#show", name: "main"
 end

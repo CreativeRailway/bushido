@@ -5,17 +5,21 @@
         %i.icon-reorder
       %ul.nav.pull-left
         %li.active
-          %a{href: "#"}
+          %a{href: "/"}
             %i.icon-home
             Главная
         %li
-          %a{href: "#"}
+          %a{href: "#{pages_url(name: "contacts")}"}
             %i.icon-envelope-alt
             Контакты
         %li
-          %a{href: "#"}
+          %a{href: "#{pages_url(name: "portfolio")}"}
             %i.icon-briefcase
             Портфолио
+        %li
+          %a{href: "#{pages_url(name: "pricing")}"}
+            %i.icon-briefcase
+            Услуги и цены
         %li.dropdown
           %a.dropdown-toggle{href:"#", "data-toggle" => "dropdown"}
             %i.icon-list-alt

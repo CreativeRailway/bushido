@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  def show
+  def index
     @page = Page.find_by_name(params[:name])
   end
 
