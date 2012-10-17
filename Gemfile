@@ -16,7 +16,7 @@ gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'less'
 
-gem "ckeditor", "3.7.1"
+gem "ckeditor", :git => 'git://github.com/k41n/ckeditor.git'
 
 gem 'devise'
 
